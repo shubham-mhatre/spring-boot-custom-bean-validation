@@ -1,0 +1,24 @@
+CREATE TABLE `einv_proc` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`doc_no` VARCHAR(50) NULL DEFAULT NULL,
+	`doc_type` VARCHAR(50) NULL DEFAULT NULL,
+	`pincode` VARCHAR(50) NULL DEFAULT NULL,
+	`validation_status` INT(11) NOT NULL DEFAULT '0',
+	`error_code` VARCHAR(50) NULL DEFAULT NULL,
+	`upload_batch_no` VARCHAR(50) NULL DEFAULT NULL,
+	PRIMARY KEY (`id`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+
+INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM1', 'b2b', '123456', 0, NULL, 'sm_17_03_24_01');
+INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM2', 'b2b', '234564', 0, NULL, 'sm_17_03_24_01');
+INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM3', 'b2b', '234524', 0, NULL, 'sm_17_03_24_01');
+INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM4', 'b2b', '234524', 0, NULL, 'sm_17_03_24_01');
+INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM5', 'b2b', '234524', 0, NULL, 'sm_17_03_24_01');
+INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM6', 'b2b', '234524', 0, NULL, 'sm_17_03_24_01');
+INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM7', 'b2b', '234524', 0, NULL, 'sm_17_03_24_01');
+INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM8', 'b2b', '234524', 0, NULL, 'sm_17_03_24_01');
+INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM9', 'b2b', '234524', 0, NULL, 'sm_17_03_24_01');
+INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM10', 'b2b', '234524', 0, NULL, 'sm_17_03_24_01');
