@@ -1,3 +1,4 @@
+--sql script start
 CREATE TABLE `einv_proc` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`doc_no` VARCHAR(50) NULL DEFAULT NULL,
@@ -22,3 +23,12 @@ INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `
 INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM8', 'b2b', '234524', 0, NULL, 'sm_17_03_24_01');
 INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM9', 'b2b', '234524', 0, NULL, 'sm_17_03_24_01');
 INSERT INTO `einv_proc` (`doc_no`, `doc_type`, `pincode`, `validation_status`, `error_code`, `upload_batch_no`) VALUES ('Doc_SM10', 'b2b', '234524', 0, NULL, 'sm_17_03_24_01');
+
+-- sql script end.
+
+
+-- postman cURL :
+
+curl --location 'http://localhost:8080/' \
+--header 'Content-Type: application/json' \
+--data '{"batch_no":"sm_17_03_24_01"}'
