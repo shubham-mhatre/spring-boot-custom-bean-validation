@@ -1,6 +1,7 @@
 package com.sm.cb.model;
 
 import com.sm.cb.annotations.ValidateDocType;
+import com.sm.cb.annotations.ValidateMandatory;
 import com.sm.cb.annotations.ValidatePincodeWithState;
 
 import jakarta.persistence.Column;
@@ -22,6 +23,7 @@ public class EinvProc {
     @Column(name = "id")
     private Integer id;
 
+	@ValidateMandatory(errorCode = "E1050")
     @Column(name = "doc_no")
     private String docNo;
 
@@ -29,9 +31,11 @@ public class EinvProc {
     @Column(name = "doc_type")
     private String docType;
 
+    @ValidateMandatory(errorCode = "E1051")
     @Column(name = "pincode")
     private String pincode;
     
+    @ValidateMandatory(errorCode = "E1052")
     @Column(name = "state_code")
     private String stateCode;
 
@@ -44,12 +48,12 @@ public class EinvProc {
     @Column(name = "upload_batch_no")
     private String uploadBatchNo;
 
-//    public String setValErrorCode(String val){
-//		if(val == null || "".equals(val)) {
-//			return "";
-//    	}
-//		else{
-//			return val+",";
-//		}
-//    }
+    public String setValErrorCode(String val){
+		if(val == null || "".equals(val)) {
+			return "";
+    	}
+		else{
+			return val+",";
+		}
+    }
 }

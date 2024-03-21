@@ -84,7 +84,7 @@ public class RuleService {
 	}
 
 	private void executeflowInAsync(List<EinvProc> pendingForValidation) {
-		Executor customExecutor = Executors.newFixedThreadPool(4);
+		Executor customExecutor = Executors.newFixedThreadPool(2);
 		List<CompletableFuture<Void>> validationFutures = pendingForValidation.stream()
 				.map(proc -> validateAsync(proc, customExecutor))
 	            .collect(Collectors.toList());
